@@ -16,6 +16,11 @@ public class PlayerController : MonoBehaviour
     public float groundCheckRadius = 0.3f;
     private bool _isGrounded;
     private bool _jumpPressed;
+    private bool _hookPressed;
+
+    [Header("Hook")]
+    public GameObject cursor;
+    public float hookForce = 10;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,17 +36,31 @@ public class PlayerController : MonoBehaviour
         {
             _jumpPressed = true;
         }
+        _hookPressed = Input.GetButton("Fire1");
     }
 
     void FixedUpdate()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
-        _rb.linearVelocity = new Vector2(moveInput * moveSpeed, _rb.linearVelocity.y);
+        Vector2 currentVelocity = _rb.linearVelocity;
+        float newX = moveInput != 0 ? moveInput * moveSpeed : currentVelocity.x;
+        _rb.linearVelocity = new Vector2(newX, currentVelocity.y);
+        
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
          if (_jumpPressed && _isGrounded)
          {
              _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
          }
+         if (_hookPressed && cursor.GetComponent<Cursor>().HookAvailable())
+         {
+             Hook();
+         }
          _jumpPressed = false;
+    }
+
+    private void Hook()
+    {
+        Vector2 direction = (cursor.transform.position - transform.position).normalized;
+        _rb.linearVelocity = direction * hookForce;
     }
 }
