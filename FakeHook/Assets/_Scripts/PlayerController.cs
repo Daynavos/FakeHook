@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour
          {
              _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
          }
-
          _jumpPressed = false;
     }
 }
