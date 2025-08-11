@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     [Header("Hook")]
     public GameObject cursor;
     public float hookForce = 10;
+    public LayerMask hooks;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -51,7 +52,7 @@ public class PlayerController : MonoBehaviour
          {
              _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
          }
-         if (_hookPressed && cursor.GetComponent<Cursor>().HookAvailable())
+         if (_hookPressed && Hooked())
          {
              Hook();
          }
@@ -62,5 +63,13 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 direction = (cursor.transform.position - transform.position).normalized;
         _rb.linearVelocity = direction * hookForce;
+    }
+
+    private bool Hooked()
+    {
+        Vector2 origin = transform.position;
+        Vector2 direction = ((Vector2)cursor.transform.position - origin).normalized;
+        RaycastHit2D hit = Physics2D.Raycast(origin, direction, Mathf.Infinity, hooks);
+        return hit.collider != null;
     }
 }

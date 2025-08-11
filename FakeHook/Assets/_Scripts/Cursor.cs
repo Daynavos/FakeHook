@@ -19,7 +19,7 @@ public class Cursor : MonoBehaviour
         mousePos.z = transform1.position.z;
         transform1.position = mousePos;
     }
-
+    //Old Logic
     public bool HookAvailable()
     {
         return Physics2D.OverlapCircle(transform.position, 1, hooks);

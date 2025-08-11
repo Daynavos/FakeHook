@@ -176,6 +176,9 @@ MonoBehaviour:
   groundCheckRadius: 0.3
   cursor: {fileID: 3785782820581437251}
   hookForce: 10
+  hooks:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1462709619027597408
 GameObject:
   m_ObjectHideFlags: 0
