@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
+    private InputAction _hook;
     private Rigidbody2D _rb;
     private Animator _animator;
     public InputActionAsset actionAsset;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
     {
         _moveAction = actionAsset.FindAction("Player/Move");
         _jumpAction = actionAsset.FindAction("Player/Jump");
+        _hook = actionAsset.FindAction("Player/ThrowHook");
         _rb = GetComponent<Rigidbody2D>();
         if (_rb) _rb.freezeRotation = true;
     }
@@ -49,11 +51,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         _moveValue = _moveAction.ReadValue<Vector2>();
-        if (Input.GetButtonDown("Jump"))
+        if (_jumpAction.IsPressed())
         {
             _jumpPressed = true;
         }
-        _hookPressed = Input.GetButton("Fire1");
+        _hookPressed = _hook.IsPressed();
     }
 
     void FixedUpdate()
