@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     public GameObject cursor;
     public float hookForce = 10;
     public LayerMask hooks;
+    public float minHookDistance = 1f;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -78,6 +79,11 @@ public class PlayerController : MonoBehaviour
          if (_hookPressed && Hooked())
          {
              Hook();
+             cursor.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 0);
+         }
+         else
+         {
+             cursor.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
          }
          _jumpPressed = false;
     }
@@ -98,6 +104,6 @@ public class PlayerController : MonoBehaviour
         Vector2 origin = transform.position;
         Vector2 direction = ((Vector2)cursor.transform.position - origin).normalized;
         RaycastHit2D hit = Physics2D.Raycast(origin, direction, cursor.GetComponent<Cursor>().maxDistanceToPlayer, hooks);
-        return hit.collider != null;
+        return hit.collider != null && !(hit.distance < minHookDistance);
     }
 }
