@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 10f;
     private Rigidbody2D _rb;
     private Animator _animator;
+    public InputActionAsset actionAsset;
+    private InputAction _moveAction;
+    private InputAction _jumpAction;
+    private Vector2 _moveValue;
     
     [Header("Ground check")]
     public Transform groundCheck;
@@ -26,13 +30,24 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        _moveAction = actionAsset.FindAction("Player/Move");
+        _jumpAction = actionAsset.FindAction("Player/Jump");
         _rb = GetComponent<Rigidbody2D>();
         if (_rb) _rb.freezeRotation = true;
+    }
+    private void OnEnable()
+    {
+        actionAsset.FindActionMap("Player").Enable();
+    }
+    private void OnDisable()
+    {
+        actionAsset.FindActionMap("Player").Disable();
     }
 
     // Update is called once per frame
     void Update()
     {
+        _moveValue = _moveAction.ReadValue<Vector2>();
         if (Input.GetButtonDown("Jump"))
         {
             _jumpPressed = true;
@@ -42,15 +57,13 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        float moveInput = Input.GetAxisRaw("Horizontal");
         Vector2 currentVelocity = _rb.linearVelocity;
-        float newX = moveInput != 0 ? moveInput * moveSpeed : currentVelocity.x;
+        float newX = _moveValue.x != 0 ? _moveValue.x * moveSpeed : currentVelocity.x;
         _rb.linearVelocity = new Vector2(newX, currentVelocity.y);
-        
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
          if (_jumpPressed && _isGrounded)
          {
-             _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
+             Jump();
          }
          if (_hookPressed && Hooked())
          {
@@ -63,6 +76,11 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 direction = (cursor.transform.position - transform.position).normalized;
         _rb.linearVelocity = direction * hookForce;
+    }
+
+    private void Jump()
+    {
+        _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
     }
 
     private bool Hooked()
