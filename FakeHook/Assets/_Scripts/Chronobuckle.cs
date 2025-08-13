@@ -20,7 +20,7 @@ public class Chronobuckle : MonoBehaviour
     
     [SerializeField] private float fullyChargedBuckle;
 
-    public GameObject volume;
+    //public GameObject volume;
     public GameObject timer;
 
     public Image timerFill;
@@ -63,7 +63,7 @@ public class Chronobuckle : MonoBehaviour
         
         if (phaseOfBuckle == BucklePhase.FullyCharged)
         {
-            volume.SetActive(false);
+           // volume.SetActive(false);
             _spriteRenderer.color = Color.red;
             Time.timeScale = 1f;
             timer.SetActive(false);
@@ -71,7 +71,7 @@ public class Chronobuckle : MonoBehaviour
         
         if (phaseOfBuckle == BucklePhase.Depleting)
         {
-            volume.SetActive(true);
+           // volume.SetActive(true);
             _spriteRenderer.color = Color.green;
             Time.timeScale = 0.5f;
             DepletingTimer();
@@ -80,7 +80,7 @@ public class Chronobuckle : MonoBehaviour
         
         if (phaseOfBuckle == BucklePhase.Charging)
         {
-            volume.SetActive(false);
+           // volume.SetActive(false);
             _spriteRenderer.color = Color.blue;
             Time.timeScale = 1f;
             ChargingTimer();
