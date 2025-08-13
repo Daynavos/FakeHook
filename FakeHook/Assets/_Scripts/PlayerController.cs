@@ -13,11 +13,12 @@ public class PlayerController : MonoBehaviour
     private InputAction _moveAction;
     private InputAction _jumpAction;
     private Vector2 _moveValue;
+    public bool maintainMomentumOnGround;
     
     [Header("Ground check")]
     public Transform groundCheck;
     public LayerMask ground;
-    public float groundCheckRadius = 0.3f;
+    public float groundCheckRadius = 0.1f;
     private bool _isGrounded;
     private bool _jumpPressed;
     private bool _hookPressed;
@@ -59,7 +60,14 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 currentVelocity = _rb.linearVelocity;
         float newX = _moveValue.x != 0 ? _moveValue.x * moveSpeed : currentVelocity.x;
-        _rb.linearVelocity = new Vector2(newX, currentVelocity.y);
+        if (!maintainMomentumOnGround)
+        {
+            _rb.linearVelocity = !_isGrounded ? new Vector2(newX, currentVelocity.y) : new Vector2(_moveValue.x * moveSpeed, currentVelocity.y);
+        }
+        else
+        {
+            _rb.linearVelocity = new Vector2(newX, currentVelocity.y);
+        }
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
          if (_jumpPressed && _isGrounded)
          {

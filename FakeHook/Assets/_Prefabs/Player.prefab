@@ -401,7 +401,7 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 8
-  groundCheckRadius: 0.3
+  groundCheckRadius: 0.1
   cursor: {fileID: 8717357876703033985}
   hookForce: 10
   hooks:
