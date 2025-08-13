@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 origin = transform.position;
         Vector2 direction = ((Vector2)cursor.transform.position - origin).normalized;
-        RaycastHit2D hit = Physics2D.Raycast(origin, direction, Mathf.Infinity, hooks);
+        RaycastHit2D hit = Physics2D.Raycast(origin, direction, cursor.GetComponent<Cursor>().maxDistanceToPlayer, hooks);
         return hit.collider != null;
     }
 }

@@ -586,3 +586,5 @@ MonoBehaviour:
   hooks:
     serializedVersion: 2
     m_Bits: 0
+  player: {fileID: 5050029532415895206}
+  maxDistanceToPlayer: 5
