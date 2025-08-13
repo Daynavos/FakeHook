@@ -963,13 +963,26 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'PRESS THIS BUTTON TO DO THIS
+  m_text: 'Use A to move left, D to move right.
 
-    PRESS THIS TO DO THIS
+    Hold Spacebar to Jump.
 
-    ............
+    Press
+    S to Jump down.
 
-    ............'
+    Press E to interact or to Pickup.
+
+    Use Mouse Cursor
+    to Aim.
+
+    Hold the Right Mouse Button to throw hook.
+
+    Hold Shift to slow
+    time.
+
+    Press Escape to pause the game.
+
+    Left Click to Shoot.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1006,9 +1019,9 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_characterSpacing: 20
+  m_wordSpacing: 10
+  m_lineSpacing: 90
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
