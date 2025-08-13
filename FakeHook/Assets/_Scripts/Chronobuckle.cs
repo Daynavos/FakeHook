@@ -9,14 +9,14 @@ public class Chronobuckle : MonoBehaviour
 
     private InputAction _slowTime;
     
-    private enum BucklePhase
+    public enum BucklePhase
     {
         FullyCharged,
         Depleting,
         Charging
     }
 
-    [SerializeField] private BucklePhase phaseOfBuckle;
+    public BucklePhase phaseOfBuckle;
     
     [SerializeField] private float fullyChargedBuckle;
 
