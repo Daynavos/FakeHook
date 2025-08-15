@@ -397,6 +397,7 @@ MonoBehaviour:
   moveSpeed: 5
   jumpForce: 5
   actionAsset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  maintainMomentumOnGround: 0
   groundCheck: {fileID: 2255007638126471458}
   ground:
     serializedVersion: 2
@@ -407,6 +408,8 @@ MonoBehaviour:
   hooks:
     serializedVersion: 2
     m_Bits: 64
+  hookReachedDistance: 1
+  HookCooldown: 1
 --- !u!1 &7068974845434870965
 GameObject:
   m_ObjectHideFlags: 0

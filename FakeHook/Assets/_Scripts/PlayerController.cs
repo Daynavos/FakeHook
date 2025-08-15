@@ -28,7 +28,11 @@ public class PlayerController : MonoBehaviour
     public GameObject cursor;
     public float hookForce = 10;
     public LayerMask hooks;
-    public float minHookDistance = 1f;
+    public float hookReachedDistance = 1f;
+    private bool _hookReached = false;
+    public float HookCooldown = 1f;
+    private float _timer;
+    private bool onCooldown = false;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -61,6 +65,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (Input.GetButtonUp("Fire2"))
+        {
+            StartHookCooldown();
+        }
+        //Movement
         Vector2 currentVelocity = _rb.linearVelocity;
         float newX = _moveValue.x != 0 ? _moveValue.x * moveSpeed : currentVelocity.x;
         if (!maintainMomentumOnGround)
@@ -71,21 +80,36 @@ public class PlayerController : MonoBehaviour
         {
             _rb.linearVelocity = new Vector2(newX, currentVelocity.y);
         }
+        
+        //Jump
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
          if (_jumpPressed && _isGrounded)
          {
              Jump();
          }
+         
+         //Hook
          if (_hookPressed && Hooked())
          {
              Hook();
-             cursor.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 0);
+             cursor.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
          }
          else
          {
-             cursor.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+             cursor.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
          }
          _jumpPressed = false;
+         
+         //Hook Timer
+         if (onCooldown)
+         {
+             _timer -= Time.fixedDeltaTime;
+             if (_timer <= 0)
+             {
+                 _timer = 0;
+                 onCooldown = false;
+             }
+         }
     }
 
     private void Hook()
@@ -99,11 +123,21 @@ public class PlayerController : MonoBehaviour
         _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
     }
 
+    private void StartHookCooldown()
+    {
+        onCooldown = true;
+        _timer = HookCooldown;
+    }
+
     private bool Hooked()
     {
         Vector2 origin = transform.position;
         Vector2 direction = ((Vector2)cursor.transform.position - origin).normalized;
         RaycastHit2D hit = Physics2D.Raycast(origin, direction, cursor.GetComponent<Cursor>().maxDistanceToPlayer, hooks);
-        return hit.collider != null && !(hit.distance < minHookDistance);
+        if (hit.distance < hookReachedDistance && !onCooldown)
+        {
+            StartHookCooldown();
+        }
+        return hit.collider != null && !(onCooldown);
     }
 }
