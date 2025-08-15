@@ -3,15 +3,8 @@ using UnityEngine;
 public class OpenUI : MonoBehaviour
 {
     [Header("UI to Open")]
-    public GameObject uiPanel; // Drag your UI GameObject here
+    public GameObject uiPanel;
 
-    private void Start()
-    {
-        /*if (uiPanel != null)
-        {
-            uiPanel.SetActive(false); // Hide UI at start
-        }*/
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,10 +12,8 @@ public class OpenUI : MonoBehaviour
         {
             if (uiPanel != null)
             {
-                uiPanel.SetActive(true); // Show UI
+                uiPanel.SetActive(true);
             }
-
-            //Destroy(gameObject); // Remove this object
         }
     }
 }

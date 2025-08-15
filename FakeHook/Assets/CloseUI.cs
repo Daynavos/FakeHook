@@ -3,7 +3,7 @@ using UnityEngine;
 public class CloseUI : MonoBehaviour
 {
     [Header("UI to Disable")]
-    public GameObject uiPanel; // Drag your UI GameObject here
+    public GameObject uiPanel;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -11,7 +11,7 @@ public class CloseUI : MonoBehaviour
         {
             if (uiPanel != null)
             {
-                uiPanel.SetActive(false); // Hide UI
+                uiPanel.SetActive(false);
             }
         }
     }
