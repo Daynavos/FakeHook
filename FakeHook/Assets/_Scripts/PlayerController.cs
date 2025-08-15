@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private InputAction _jumpAction;
     private Vector2 _moveValue;
     public bool maintainMomentumOnGround;
+    private bool _jumping = false;
     
     [Header("Ground check")]
     public Transform groundCheck;
@@ -83,33 +84,37 @@ public class PlayerController : MonoBehaviour
         
         //Jump
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
-         if (_jumpPressed && _isGrounded)
-         {
-             Jump();
-         }
+        if (_isGrounded)
+        {
+            _jumping = false;
+        }
+        if (_jumpPressed && _isGrounded)
+        {
+            Jump();
+        }
          
-         //Hook
-         if (_hookPressed && Hooked())
-         {
-             Hook();
-             cursor.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
-         }
-         else
-         {
-             cursor.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
-         }
-         _jumpPressed = false;
+        //Hook
+        if (_hookPressed && Hooked())
+        {
+            Hook();
+            cursor.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
+        }
+        else
+        {
+            cursor.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+        }
+        _jumpPressed = false;
          
-         //Hook Timer
-         if (onCooldown)
-         {
-             _timer -= Time.fixedDeltaTime;
-             if (_timer <= 0)
-             {
-                 _timer = 0;
-                 onCooldown = false;
-             }
-         }
+        //Hook Timer
+        if (onCooldown)
+        {
+            _timer -= Time.fixedDeltaTime;
+            if (_timer <= 0)
+            {
+                _timer = 0;
+                onCooldown = false;
+            }
+        }
     }
 
     private void Hook()
@@ -120,6 +125,11 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
+        if (_jumping)
+        {
+            return;
+        }
+        _jumping = true;
         _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
     }
 
