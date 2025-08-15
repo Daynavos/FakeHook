@@ -127,7 +127,7 @@ Transform:
   m_GameObject: {fileID: 1720012434910605558}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.606, z: 0}
+  m_LocalPosition: {x: -0.165, y: -0.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -218,13 +218,13 @@ GameObject:
   m_Component:
   - component: {fileID: 3842163593778577159}
   - component: {fileID: 8979578981246603810}
-  - component: {fileID: 6118261173834844034}
+  - component: {fileID: 2324113188084174567}
   - component: {fileID: 4003195922821346346}
   - component: {fileID: 8857156944944756099}
   - component: {fileID: 8126997065726368935}
   m_Layer: 0
   m_Name: PlayerTemp
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -291,8 +291,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.9406482, b: 0.6650944, a: 1}
+  m_Sprite: {fileID: 21300000, guid: be99240f210f4c34cb23def842780a23, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -302,8 +302,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &6118261173834844034
-CircleCollider2D:
+--- !u!61 &2324113188084174567
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -336,8 +336,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: -0.15518332, y: -0.015835047}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.7015276, y: 1.6262932}
+  m_EdgeRadius: 0
 --- !u!50 &4003195922821346346
 Rigidbody2D:
   serializedVersion: 5
@@ -379,7 +389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionAsset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   phaseOfBuckle: 0
-  fullyChargedBuckle: 2.5
+  fullyChargedBuckle: 2
   timer: {fileID: 7068974845434870965}
   timerFill: {fileID: 430863229735224851}
 --- !u!114 &8126997065726368935
@@ -394,15 +404,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17cb2774abeb2a141857530fe4f8aa87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 10
+  moveSpeed: 4
+  jumpForce: 5
   groundCheck: {fileID: 2255007638126471458}
   ground:
     serializedVersion: 2
     m_Bits: 8
   groundCheckRadius: 0.3
   cursor: {fileID: 8717357876703033985}
-  hookForce: 10
+  hookForce: 5
   hooks:
     serializedVersion: 2
     m_Bits: 64

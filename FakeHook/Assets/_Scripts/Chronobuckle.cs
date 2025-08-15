@@ -64,7 +64,6 @@ public class Chronobuckle : MonoBehaviour
         if (phaseOfBuckle == BucklePhase.FullyCharged)
         {
            // volume.SetActive(false);
-            _spriteRenderer.color = Color.red;
             Time.timeScale = 1f;
             timer.SetActive(false);
         }
@@ -72,7 +71,6 @@ public class Chronobuckle : MonoBehaviour
         if (phaseOfBuckle == BucklePhase.Depleting)
         {
            // volume.SetActive(true);
-            _spriteRenderer.color = Color.green;
             Time.timeScale = 0.5f;
             DepletingTimer();
             UpdateTimerBar();
@@ -81,7 +79,6 @@ public class Chronobuckle : MonoBehaviour
         if (phaseOfBuckle == BucklePhase.Charging)
         {
            // volume.SetActive(false);
-            _spriteRenderer.color = Color.blue;
             Time.timeScale = 1f;
             ChargingTimer();
             UpdateTimerBar();
