@@ -6,14 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="b3f42d23-a901-4bf9-a23d-daf924ff35a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FakeHook/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FakeHook/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dayna.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dayna.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dayna.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dayna/Global Volume Profile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dayna/Global Volume Profile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dayna_Profiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TutorialLevel.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Game Level Layout Holder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Game Level Layout Holder.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Hook.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Hook.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/LaserBeam.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/LaserBeam.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/PlayerTemp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/PlayerTemp.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Tutorial Level Layout Holder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Tutorial Level Layout Holder.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Chronobuckle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Chronobuckle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Sprites/Images/GameLayout.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Sprites/Images/GameLayout.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Sprites/Images/Tut Layout.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Sprites/Images/Tut Layout.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Laser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Laser.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +29,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Chronobuckle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Laser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/move Test.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -114,6 +119,7 @@
       <workItem from="1755020545406" duration="5649000" />
       <workItem from="1755088637019" duration="28000" />
       <workItem from="1755249759425" duration="2299000" />
+      <workItem from="1755270130535" duration="2405000" />
     </task>
     <servers />
   </component>

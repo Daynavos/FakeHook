@@ -13,14 +13,15 @@ public class Chronobuckle : MonoBehaviour
     {
         FullyCharged,
         Depleting,
-        Charging
+        Charging,
+        CoolDown
     }
 
     public BucklePhase phaseOfBuckle;
     
     [SerializeField] private float fullyChargedBuckle;
 
-    //public GameObject volume;
+    public GameObject volume;
     public GameObject timer;
 
     public Image timerFill;
@@ -40,7 +41,6 @@ public class Chronobuckle : MonoBehaviour
 
     void Start()
     {
-        _chargeLevel = Mathf.Clamp(_chargeLevel, 0f, fullyChargedBuckle);
         _chargeLevel = fullyChargedBuckle;
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _slowTime = actionAsset.FindAction("Player/SlowTime");
@@ -63,14 +63,14 @@ public class Chronobuckle : MonoBehaviour
         
         if (phaseOfBuckle == BucklePhase.FullyCharged)
         {
-           // volume.SetActive(false);
+            volume.SetActive(false);
             Time.timeScale = 1f;
             timer.SetActive(false);
         }
         
         if (phaseOfBuckle == BucklePhase.Depleting)
         {
-           // volume.SetActive(true);
+            volume.SetActive(true);
             Time.timeScale = 0.5f;
             DepletingTimer();
             UpdateTimerBar();
@@ -78,7 +78,7 @@ public class Chronobuckle : MonoBehaviour
         
         if (phaseOfBuckle == BucklePhase.Charging)
         {
-           // volume.SetActive(false);
+            volume.SetActive(false);
             Time.timeScale = 1f;
             ChargingTimer();
             UpdateTimerBar();
@@ -88,17 +88,24 @@ public class Chronobuckle : MonoBehaviour
     private void DepletingTimer()
     {
         UpdateTimerBar();
-        _chargeLevel -= Time.deltaTime;
-        if (_chargeLevel == 0)
+        _chargeLevel = Mathf.Clamp(_chargeLevel - Time.deltaTime, 0f, fullyChargedBuckle);
+
+        if (_chargeLevel < 0)
         {
-            phaseOfBuckle = BucklePhase.Charging;
+            if (!_slowTime.IsPressed())
+            {
+                phaseOfBuckle = BucklePhase.Charging;
+            }
+            Time.timeScale = 1f;
+            phaseOfBuckle = BucklePhase.CoolDown;
         }
     }
 
     private void ChargingTimer()
     {
         UpdateTimerBar();
-        _chargeLevel += Time.deltaTime;
+        _chargeLevel = Mathf.Clamp(_chargeLevel + Time.deltaTime, 0f, fullyChargedBuckle);
+
         if (_chargeLevel > fullyChargedBuckle)
         {
             phaseOfBuckle = BucklePhase.FullyCharged;

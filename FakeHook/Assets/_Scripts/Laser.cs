@@ -15,11 +15,7 @@ public class Laser : MonoBehaviour
     void Update()
     {
         _phase = GameObject.FindGameObjectWithTag("Player").GetComponent<Chronobuckle>().phaseOfBuckle;
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            
-        }
+        
         if (_phase == Chronobuckle.BucklePhase.Depleting)
         {
             LaserOff();
