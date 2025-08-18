@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetButtonUp("Fire2"))
+        if (_hook.WasReleasedThisFrame())
         {
             StartHookCooldown();
         }
@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
         }
          
         //Hook
-        if (_hookPressed && Hooked())
+        if (_hookPressed && Hooked() && !onCooldown)
         {
             Hook();
             cursor.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
         //Hook Timer
         if (onCooldown)
         {
-            _timer -= Time.fixedDeltaTime;
+            _timer -= Time.fixedUnscaledDeltaTime;
             if (_timer <= 0)
             {
                 _timer = 0;
@@ -146,6 +146,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(origin, direction, cursor.GetComponent<Cursor>().maxDistanceToPlayer, hooks);
         if (hit.distance < hookReachedDistance && !onCooldown)
         {
+            Debug.Log("inRange");
             StartHookCooldown();
         }
         return hit.collider != null && !(onCooldown);

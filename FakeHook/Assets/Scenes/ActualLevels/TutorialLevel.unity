@@ -194,13 +194,17 @@ PrefabInstance:
       propertyPath: hooks.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 3462583922565262263, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3842163593778577159, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.1
+      value: 10.88
       objectReference: {fileID: 0}
     - target: {fileID: 3842163593778577159, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8346701
+      value: 10.5
       objectReference: {fileID: 0}
     - target: {fileID: 3842163593778577159, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
       propertyPath: m_LocalPosition.z
@@ -237,6 +241,10 @@ PrefabInstance:
     - target: {fileID: 5050029532415895206, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
       propertyPath: m_Name
       value: PlayerTemp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126997065726368935, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
+      propertyPath: HookCooldown
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -362,7 +370,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0

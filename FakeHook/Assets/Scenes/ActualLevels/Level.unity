@@ -128,18 +128,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2884530089627530035, guid: ebb94c56b88ddd54da0710777f42f960, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884530089627530035, guid: ebb94c56b88ddd54da0710777f42f960, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884530089627530035, guid: ebb94c56b88ddd54da0710777f42f960, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884530089627530035, guid: ebb94c56b88ddd54da0710777f42f960, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.41
       objectReference: {fileID: 0}
@@ -179,10 +167,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2884530089627530035, guid: ebb94c56b88ddd54da0710777f42f960, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2975687421721917583, guid: ebb94c56b88ddd54da0710777f42f960, type: 3}
       propertyPath: m_Name
       value: Game Level Layout Holder
@@ -202,11 +186,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3842163593778577159, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.124059916
+      value: -8.04
       objectReference: {fileID: 0}
     - target: {fileID: 3842163593778577159, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.079401
+      value: -2.48
       objectReference: {fileID: 0}
     - target: {fileID: 3842163593778577159, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
       propertyPath: m_LocalPosition.z
@@ -244,15 +228,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerTemp
       objectReference: {fileID: 0}
-    - target: {fileID: 5531876585336780927, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 8857156944944756099, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
+      propertyPath: fullyChargedBuckle
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
+--- !u!1 &1491798898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5050029532415895206, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
+  m_PrefabInstance: {fileID: 1348985074}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1893443205
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +254,7 @@ GameObject:
   - component: {fileID: 1893443207}
   - component: {fileID: 1893443206}
   - component: {fileID: 1893443209}
+  - component: {fileID: 1893443210}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -315,7 +305,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -340,7 +330,7 @@ Transform:
   m_GameObject: {fileID: 1893443205}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0.77, y: 0.52, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -390,6 +380,19 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1893443210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893443205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b11eb14f587544b9f2440bcc331649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1491798898}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
