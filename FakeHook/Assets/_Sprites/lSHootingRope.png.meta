@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5e679ece0aa444140abb50faaf6eec4d
+guid: 721d56a6f4caac24fb8d6aec8e75284d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4776957024667937859
-    second: chainPng_0
+      213: -4570153536982545689
+    second: Rope_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,17 +46,17 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 11, y: 12, z: 14, w: 13}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,33 +100,37 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chainPng_0
+      name: lSHootingRope_0
       rect:
         serializedVersion: 2
-        x: 45
-        y: 23
-        width: 413
-        height: 962
+        x: 11
+        y: 14
+        width: 7
+        height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 34ca3a2ca192b4240800000000000000
-      internalID: 4776957024667937859
+      spriteID: b3e687744de70b04783532c575bc88dd
+      internalID: 51272927
       vertices: []
       indices: 
       edges: []
       weights: []
-    outline: []
+    outline:
+    - - {x: -5, y: -3}
+      - {x: 2, y: -3}
+      - {x: 2, y: 4}
+      - {x: -5, y: 4}
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
-    internalID: 0
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -135,7 +139,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chainPng_0: 4776957024667937859
+      lSHootingRope_0: 51272927
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

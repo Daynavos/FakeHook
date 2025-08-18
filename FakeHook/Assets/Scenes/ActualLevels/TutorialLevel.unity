@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1108203221828543518, guid: c345943b830a8a948b7ae4bb63a066f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2121358729370647868, guid: c345943b830a8a948b7ae4bb63a066f2, type: 3}
       propertyPath: m_Name
       value: Tutorial Level Layout Holder
@@ -171,14 +175,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5266270405488326712, guid: c345943b830a8a948b7ae4bb63a066f2, type: 3}
-      propertyPath: m_DrawMode
-      value: 2
+    - target: {fileID: 5596071657662069335, guid: c345943b830a8a948b7ae4bb63a066f2, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5809532
+      objectReference: {fileID: 0}
+    - target: {fileID: 5596071657662069335, guid: c345943b830a8a948b7ae4bb63a066f2, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.20952341
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 1456738671928458980, guid: c345943b830a8a948b7ae4bb63a066f2, type: 3}
-    - {fileID: 3237767285767189257, guid: c345943b830a8a948b7ae4bb63a066f2, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c345943b830a8a948b7ae4bb63a066f2, type: 3}
@@ -190,6 +196,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4431691968661788, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
+      propertyPath: m_Parameters.textureMode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431691968661788, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: abc5e65cfd8f06e41901b8e3fd5122d3, type: 2}
     - target: {fileID: 457916798571912686, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
       propertyPath: hooks.m_Bits
       value: 64
@@ -200,11 +214,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3842163593778577159, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.88
+      value: 15.57
       objectReference: {fileID: 0}
     - target: {fileID: 3842163593778577159, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.5
+      value: 20.75
       objectReference: {fileID: 0}
     - target: {fileID: 3842163593778577159, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
       propertyPath: m_LocalPosition.z

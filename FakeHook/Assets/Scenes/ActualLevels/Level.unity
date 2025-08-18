@@ -171,6 +171,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Level Layout Holder
       objectReference: {fileID: 0}
+    - target: {fileID: 3221613014154390398, guid: ebb94c56b88ddd54da0710777f42f960, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3270737
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221613014154390398, guid: ebb94c56b88ddd54da0710777f42f960, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3270737
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221613014154390398, guid: ebb94c56b88ddd54da0710777f42f960, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3962264
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -227,10 +239,6 @@ PrefabInstance:
     - target: {fileID: 5050029532415895206, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
       propertyPath: m_Name
       value: PlayerTemp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8857156944944756099, guid: fd238e954b9dfbe429e331363f9a6d83, type: 3}
-      propertyPath: fullyChargedBuckle
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

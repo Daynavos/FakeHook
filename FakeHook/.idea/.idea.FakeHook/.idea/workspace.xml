@@ -6,182 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="b3f42d23-a901-4bf9-a23d-daf924ff35a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FakeHook/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FakeHook/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-01.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-01.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-02.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-02.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-03.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-03.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-04.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-04.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-05.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-05.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-06.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-06.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-07.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-07.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-08.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-08.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-09.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-09.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-10.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-10.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-11.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-11.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-12.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-12.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-13.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-13.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-14.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-14.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-15.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-15.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-16.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-16.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-17.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-17.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-18.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-18.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-19.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-19.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-20.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-20.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-21.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-21.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-22.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-22.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-23.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-23.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-24.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-24.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-25.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-25.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-26.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-26.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-27.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-27.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-28.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-28.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-29.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-29.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-30.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-30.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-31.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-31.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-32.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-32.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-33.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-33.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-34.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-34.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-35.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-35.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-36.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-36.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-37.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-37.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-38.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-38.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-39.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-39.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-40.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-40.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-41.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-41.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-42.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-42.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-43.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-43.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-44.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-44.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-45.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-45.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-46.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-46.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-47.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-47.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-48.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-48.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-49.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-49.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-50.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/DM-CGS-50.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/license.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual Game Sounds U6/CasualGameSounds/license.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CloseUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CloseUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/BONUS 1 - EXTRA FULL TRACK.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/BONUS 1 - EXTRA FULL TRACK/TROPICAL GAME.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/BONUS 1 - EXTRA FULL TRACK/TROPICAL GAME.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/BONUS 2 - SFX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/BONUS 2 - SFX/FIREWORKS 3.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/BONUS 2 - SFX/FIREWORKS 3.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/BONUS 2 - SFX/POP 1.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/BONUS 2 - SFX/POP 1.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/BONUS 2 - SFX/POWERUP 1.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/BONUS 2 - SFX/POWERUP 1.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/BONUS 2 - SFX/SPECIAL COLECT 1.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/BONUS 2 - SFX/SPECIAL COLECT 1.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL GAME MUSIC (FREE).pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL GAME MUSIC (FREE).pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL GAME MUSIC (FULL VERSION).pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL GAME MUSIC (FULL VERSION).pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL THEME 2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL THEME 2/CASUAL THEME 2 - LOOP 1.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL THEME 2/CASUAL THEME 2 - LOOP 1.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL THEME 2/CASUAL THEME 2 - LOOP 2.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL THEME 2/CASUAL THEME 2 - LOOP 2.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL THEME 2/CASUAL THEME 2 - LOOP 3.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL THEME 2/CASUAL THEME 2 - LOOP 3.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL THEME 3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL THEME 3/CASUAL THEME 3 - LOOP (1).wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL THEME 3/CASUAL THEME 3 - LOOP (1).wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL THEME 3/CASUAL THEME 3 - LOOP (3).wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL THEME 3/CASUAL THEME 3 - LOOP (3).wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL THEME 3/CASUAL THEME 3 - LOOP (4).wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL THEME 3/CASUAL THEME 3 - LOOP (4).wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL THEME 4.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL THEME 4/Casual theme loop 3.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/CASUAL THEME 4/Casual theme loop 3.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/OTHERS.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/OTHERS/Casual suspense.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/OTHERS/Casual suspense.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/OTHERS/Chinese_loop 1.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/OTHERS/Chinese_loop 1.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/OTHERS/Marimba jazz.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/OTHERS/Marimba jazz.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/RUNNING WILD.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/RUNNING WILD/RUNNING WILD - LOOP 1.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/RUNNING WILD/RUNNING WILD - LOOP 1.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/RUNNING WILD/RUNNING WILD - LOOP 4.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/RUNNING WILD/RUNNING WILD - LOOP 4.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/WELCOME_CGMUSIC.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FREE CASUAL MUSIC PACK/WELCOME_CGMUSIC.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OpenUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OpenUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PauseMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PauseMenu.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualLevels/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualLevels/Level.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualLevels/TutorialLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualLevels/TutorialLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dayna/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dayna/Global Volume Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dayna_Profiles.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Langa.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Langa.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Game Level Layout Holder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Game Level Layout Holder.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/LaserBeam.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/LaserBeam.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/MovingHooks.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/MovingHooks.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Hook.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Hook.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/PlayerTemp.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/PlayerTemp.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Tutorial Level Layout Holder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Tutorial Level Layout Holder.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/sideHook.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/sideHook.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Sprites/TileSet/New Tile Palette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Sprites/TileSet/New Tile Palette.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/postProcess.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/postProcess.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/postProcess/Global Volume Profile.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/postProcess/Global Volume Profile.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Sprites/Rope.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Sprites/Rope.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Sprites/chainPng.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Sprites/chainPng.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,6 +58,17 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Builds\FakeHook.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\dayna\Documents\GD\FakeHook\Builds" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.38f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\dayna\Documents\GD\FakeHook\FakeHook\FakeHook -debugCodeOptimization" />
@@ -284,7 +134,7 @@
       <workItem from="1755088637019" duration="28000" />
       <workItem from="1755249759425" duration="2299000" />
       <workItem from="1755270130535" duration="2405000" />
-      <workItem from="1755519375671" duration="7807000" />
+      <workItem from="1755519375671" duration="11322000" />
     </task>
     <servers />
   </component>

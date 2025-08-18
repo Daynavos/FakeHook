@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
     private float _timer;
     private bool onCooldown = false;
     
+    private LineRenderer _lineRenderer;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,6 +45,7 @@ public class PlayerController : MonoBehaviour
         _hook = actionAsset.FindAction("Player/ThrowHook");
         _rb = GetComponent<Rigidbody2D>();
         if (_rb) _rb.freezeRotation = true;
+        _lineRenderer = GetComponent<LineRenderer>();
     }
     private void OnEnable()
     {
@@ -94,9 +97,10 @@ public class PlayerController : MonoBehaviour
         }
          
         //Hook
-        if (_hookPressed && Hooked() && !onCooldown)
+        if (_hookPressed && (Hooked() != null) && !onCooldown)
         {
             Hook();
+            LineRender(Hooked().gameObject);
             cursor.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
         }
         else
@@ -115,6 +119,16 @@ public class PlayerController : MonoBehaviour
                 onCooldown = false;
             }
         }
+    }
+
+    private void LineRender(GameObject hookTarget)
+    {
+        _lineRenderer.enabled = true;
+        _lineRenderer.SetPosition(0, transform.position);
+        _lineRenderer.SetPosition(1, hookTarget.transform.position);
+        Transform childTransform = hookTarget.transform.GetChild(0);
+        GameObject childGameObject = childTransform.gameObject;
+        childGameObject.SetActive(true);
     }
 
     private void Hook()
@@ -139,7 +153,20 @@ public class PlayerController : MonoBehaviour
         _timer = HookCooldown;
     }
 
-    private bool Hooked()
+    // private bool Hooked()
+    // {
+    //     Vector2 origin = transform.position;
+    //     Vector2 direction = ((Vector2)cursor.transform.position - origin).normalized;
+    //     RaycastHit2D hit = Physics2D.Raycast(origin, direction, cursor.GetComponent<Cursor>().maxDistanceToPlayer, hooks);
+    //     if (hit.distance < hookReachedDistance && !onCooldown)
+    //     {
+    //         Debug.Log("inRange");
+    //         StartHookCooldown();
+    //     }
+    //     return hit.collider != null && !(onCooldown);
+    // }
+    
+    private Collider2D Hooked()
     {
         Vector2 origin = transform.position;
         Vector2 direction = ((Vector2)cursor.transform.position - origin).normalized;
@@ -149,6 +176,6 @@ public class PlayerController : MonoBehaviour
             Debug.Log("inRange");
             StartHookCooldown();
         }
-        return hit.collider != null && !(onCooldown);
+        return hit.collider;
     }
 }

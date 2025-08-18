@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Langa.unity
-    guid: 1fef3a4f0cfe0554185ce88ddfaa0fbf
+    path: Assets/Scenes/ActualLevels/TutorialLevel.unity
+    guid: e91405ca09bdae144ae12eacc44ea50b
   - enabled: 1
-    path: Assets/Scenes/Scene1.unity
-    guid: fb0d5890a116c7f4eb37ecb4b961d529
+    path: Assets/Scenes/ActualLevels/Level.unity
+    guid: 808748ed81325db4e9775366d16ae339
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
