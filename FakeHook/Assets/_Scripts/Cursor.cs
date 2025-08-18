@@ -6,6 +6,8 @@ public class Cursor : MonoBehaviour
 {
     public LayerMask hooks;
     private bool _onHook;
+    public GameObject player;
+    public float maxDistanceToPlayer = 5f;
     void Start()
     {
         UnityEngine.Cursor.visible = false;
@@ -15,9 +17,14 @@ public class Cursor : MonoBehaviour
     {
         if (Camera.main == null) return;
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        var transform1 = transform;
-        mousePos.z = transform1.position.z;
-        transform1.position = mousePos;
+        var cursorPos = transform;
+        mousePos.z = cursorPos.position.z;
+        Vector3 direction = mousePos - player.transform.position;
+        if (direction.magnitude>maxDistanceToPlayer)
+        {
+            direction = direction.normalized * maxDistanceToPlayer;
+        }
+        transform.position = player.transform.position + direction;
     }
     //Old Logic
     public bool HookAvailable()
