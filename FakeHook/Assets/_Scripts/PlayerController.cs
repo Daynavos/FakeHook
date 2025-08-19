@@ -55,14 +55,6 @@ public class PlayerController : MonoBehaviour
     {
         actionAsset.FindActionMap("Player").Disable();
     }
-    private void OnEnable()
-    {
-        actionAsset.FindActionMap("Player").Enable();
-    }
-    private void OnDisable()
-    {
-        actionAsset.FindActionMap("Player").Disable();
-    }
 
     // Update is called once per frame
     void Update()
@@ -77,6 +69,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
         if (_hook.WasReleasedThisFrame())
         {
             StartHookCooldown();
@@ -94,7 +87,6 @@ public class PlayerController : MonoBehaviour
         }
         
         //Jump
-        _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
         if (_isGrounded)
         {
             _jumping = false;
