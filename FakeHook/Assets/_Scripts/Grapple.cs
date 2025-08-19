@@ -19,7 +19,7 @@ namespace _Scripts
         public bool IsFlying { get; private set; } = false;
         private Vector3 _target;
         
-        void Update()
+        void FixedUpdate()
         {
             if (IsAttached)
             {
@@ -35,7 +35,7 @@ namespace _Scripts
             // move head toward target
             Vector3 rawDir = (_target - headPos);
             Vector3 moveDir = rawDir.normalized;
-            Vector3 newHeadPos = headPos + moveDir * (hookSpeed * Time.unscaledDeltaTime);
+            Vector3 newHeadPos = headPos + moveDir * (hookSpeed * Time.fixedUnscaledDeltaTime);
             hookHeadTransform.position = newHeadPos;
             
             float headAngle = Mathf.Atan2(moveDir.y, moveDir.x) * Mathf.Rad2Deg;
