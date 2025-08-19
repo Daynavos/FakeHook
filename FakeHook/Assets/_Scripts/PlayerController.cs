@@ -36,7 +36,8 @@ public class PlayerController : MonoBehaviour
     private bool onCooldown = false;
     
     private LineRenderer _lineRenderer;
-    
+    private static readonly int HookAnim = Animator.StringToHash("Hook");
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         if (_rb) _rb.freezeRotation = true;
         _lineRenderer = GetComponent<LineRenderer>();
+        _animator = GetComponent<Animator>();
     }
     private void OnEnable()
     {
@@ -100,6 +102,8 @@ public class PlayerController : MonoBehaviour
         if (_hookPressed && Hooked())
         {
             Hook();
+            AimHookAtCursor();
+            _animator.SetTrigger(HookAnim);
             cursor.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
         }
         else
@@ -135,6 +139,20 @@ public class PlayerController : MonoBehaviour
         _jumping = true;
         _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
     }
+    private void AimHookAtCursor()
+    {
+        // Get cursor and player positions
+        Vector3 cursorPos = cursor.transform.position;
+        Vector3 playerPos = transform.position;
+
+        // Direction from player to cursor
+        Vector3 direction = (cursorPos - playerPos).normalized;
+
+        // Rotate the Hook object (the parent of rope + hookhead)
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.Find("Hook").rotation = Quaternion.Euler(0, 0, angle);
+    }
+
 
     private void StartHookCooldown()
     {
