@@ -17,10 +17,12 @@ public class PauseMenu : MonoBehaviour
             if (GameIsPaused)
             {
                 Resume();
+                Time.timeScale = 1f;
             }
             else
             {
                 Pause();
+                Time.timeScale = 0f;
             }
 
         }
@@ -43,7 +45,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("Scene1");
+        SceneManager.LoadScene("1_TutorialLevel");
         Time.timeScale = 1.0f;
     }
 

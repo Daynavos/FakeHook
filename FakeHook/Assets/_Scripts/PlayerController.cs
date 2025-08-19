@@ -40,6 +40,12 @@ public class PlayerController : MonoBehaviour
     private LineRenderer _lineRenderer;
     private static readonly int HookAnim = Animator.StringToHash("Hook");
 
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -164,6 +170,7 @@ public class PlayerController : MonoBehaviour
             grapple.Detach();
             StartHookCooldown();
         }
+        audioManager.PlaySFX(audioManager.grapple);
     }
 
     private void Jump()
@@ -174,6 +181,7 @@ public class PlayerController : MonoBehaviour
         }
         _jumping = true;
         _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
+        audioManager.PlaySFX(audioManager.Jump);
     }
 
 
