@@ -633,6 +633,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8477774679492273735, guid: 4ef4b6077e6119c4fa72d5b3620ca8e6, type: 3}
+      propertyPath: m_Color.a
+      value: 0.36862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477774679492273735, guid: 4ef4b6077e6119c4fa72d5b3620ca8e6, type: 3}
+      propertyPath: m_Color.b
+      value: 0.013187984
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477774679492273735, guid: 4ef4b6077e6119c4fa72d5b3620ca8e6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7987421
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477774679492273735, guid: 4ef4b6077e6119c4fa72d5b3620ca8e6, type: 3}
+      propertyPath: m_Color.r
+      value: 0.002511599
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
