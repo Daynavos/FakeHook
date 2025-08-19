@@ -15,7 +15,6 @@ public class nextLevel : MonoBehaviour
 
     void GoToNextLevel()
     {
-        
         NextLevel?.Invoke();
     }
 }

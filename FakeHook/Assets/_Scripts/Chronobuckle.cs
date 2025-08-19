@@ -121,7 +121,7 @@ public class Chronobuckle : MonoBehaviour
         UpdateTimerBar();
         _chargeLevel = Mathf.Clamp(_chargeLevel + Time.deltaTime, 0f, fullyChargedBuckle);
 
-        if (_chargeLevel > fullyChargedBuckle)
+        if (_chargeLevel >= fullyChargedBuckle)
         {
             phaseOfBuckle = BucklePhase.FullyCharged;
         }

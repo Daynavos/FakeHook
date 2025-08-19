@@ -18,6 +18,7 @@ namespace _Scripts
         public InputActionAsset actionAsset;
         private InputAction _pauseAction;
 
+        public bool timerStarted  = false;
         void Awake()
         {
             if (Instance != null && Instance != this)
@@ -103,7 +104,12 @@ namespace _Scripts
             }
             if (gamePaused) return;
             if (SceneManager.GetActiveScene().buildIndex!=timedLevelSceneIndex) return;
-            _timer += Time.unscaledDeltaTime;
+            if (timerStarted)
+            {
+                _timer += Time.unscaledDeltaTime;
+            }
+            
+            //_timer =  Mathf.Round(_timer * 100f) / 100f;
             UIController.Instance.UpdateTime(_timer);
         }
         void Restart()
