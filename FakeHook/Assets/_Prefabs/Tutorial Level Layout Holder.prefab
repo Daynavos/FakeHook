@@ -15981,6 +15981,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hook (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7484043695146160770, guid: 2ea50c28fbd583542befb1c2e8408fc5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8483
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563908547168851079, guid: 2ea50c28fbd583542befb1c2e8408fc5, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3473759
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
