@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 73dafdf24039e624cb7d119af4e4be13
+guid: 5e679ece0aa444140abb50faaf6eec4d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4241057764988547376
-    second: Chracter Forward 1_0
+      213: 4776957024667937859
+    second: chainPng_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chracter Forward 1_0
+      name: chainPng_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 5
-        width: 24
-        height: 53
+        x: 45
+        y: 23
+        width: 413
+        height: 962
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0de02fdce6cb425c0800000000000000
-      internalID: -4241057764988547376
+      spriteID: 34ca3a2ca192b4240800000000000000
+      internalID: 4776957024667937859
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Chracter Forward 1_0: -4241057764988547376
+      chainPng_0: 4776957024667937859
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
