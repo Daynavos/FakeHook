@@ -1,5 +1,6 @@
 ﻿
 using System;
+using _Scripts;
 using UnityEngine;
 
 public class Cursor : MonoBehaviour
@@ -16,6 +17,7 @@ public class Cursor : MonoBehaviour
     void Update()
     {
         if (Camera.main == null) return;
+        if (GameController.Instance.gamePaused) return;
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         var cursorPos = transform;
         mousePos.z = cursorPos.position.z;

@@ -1,4 +1,5 @@
 using System;
+using _Scripts;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,15 +8,15 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
-    private InputAction _hook;
+    private InputAction _hookAction;
     private Rigidbody2D _rb;
-    private Animator _animator;
     public InputActionAsset actionAsset;
     private InputAction _moveAction;
     private InputAction _jumpAction;
     private Vector2 _moveValue;
     public bool maintainMomentumOnGround;
     private bool _jumping = false;
+    public Animator animator;
     
     [Header("Ground check")]
     public Transform groundCheck;
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private bool _isGrounded;
     private bool _jumpPressed;
     private bool _hookPressed;
+    private bool _prevHookPressed;
 
     [Header("Hook")]
     public GameObject cursor;
@@ -34,26 +36,41 @@ public class PlayerController : MonoBehaviour
     public float HookCooldown = 1f;
     private float _timer;
     private bool onCooldown = false;
+    public Grapple grapple;
+    private static readonly int Speed = Animator.StringToHash("Speed");
+
     
     private LineRenderer _lineRenderer;
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _moveAction = actionAsset.FindAction("Player/Move");
         _jumpAction = actionAsset.FindAction("Player/Jump");
-        _hook = actionAsset.FindAction("Player/ThrowHook");
+        _hookAction = actionAsset.FindAction("Player/ThrowHook");
         _rb = GetComponent<Rigidbody2D>();
         if (_rb) _rb.freezeRotation = true;
         _lineRenderer = GetComponent<LineRenderer>();
+        animator = GetComponent<Animator>();
     }
     private void OnEnable()
     {
         actionAsset.FindActionMap("Player").Enable();
+        if (grapple != null)
+        {
+            grapple.OnAttached += OnGrappleAttached;
+            grapple.OnNotAttached += OnGrappleNotAttached;
+        }
     }
     private void OnDisable()
     {
         actionAsset.FindActionMap("Player").Disable();
+        if (grapple != null)
+        {
+            grapple.OnAttached -= OnGrappleAttached;
+            grapple.OnNotAttached -= OnGrappleNotAttached;
+        }
+        
     }
 
     // Update is called once per frame
@@ -64,15 +81,13 @@ public class PlayerController : MonoBehaviour
         {
             _jumpPressed = true;
         }
-        _hookPressed = _hook.IsPressed();
+        _hookPressed = _hookAction.IsPressed();
     }
 
     void FixedUpdate()
     {
-        if (_hook.WasReleasedThisFrame())
-        {
-            StartHookCooldown();
-        }
+        _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
+        
         //Movement
         Vector2 currentVelocity = _rb.linearVelocity;
         float newX = _moveValue.x != 0 ? _moveValue.x * moveSpeed : currentVelocity.x;
@@ -85,28 +100,39 @@ public class PlayerController : MonoBehaviour
             _rb.linearVelocity = new Vector2(newX, currentVelocity.y);
         }
         
+        if (_rb.linearVelocity.x > 0)
+            transform.localScale = new Vector3(1, 1, 1);
+        else if (_rb.linearVelocity.x < 0)
+            transform.localScale = new Vector3(-1, 1, 1);
+        
         //Jump
-        _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
         if (_isGrounded)
         {
             _jumping = false;
+            animator.SetFloat(Speed, Mathf.Abs(_rb.linearVelocity.x));
         }
         if (_jumpPressed && _isGrounded)
         {
             Jump();
         }
-         
+
+        if (_hookPressed && !_prevHookPressed && !onCooldown)
+        {
+            grapple.Throw(cursor.transform.position);
+        }
+        if (grapple.IsAttached && _hookPressed)
+        {
+            HookTowardsAttachPoint();
+        }
+        if (grapple != null && grapple.IsAttached && _prevHookPressed && !_hookPressed)
+        {
+            // Player released hook button while attached: detach grapple
+            grapple.Detach();
+            StartHookCooldown();
+            // do not zero player velocity; preserve momentum (we already set linearVelocity via HookTowardsAttachPoint each frame)
+        }
+
         //Hook
-        if (_hookPressed && (Hooked() != null) && !onCooldown)
-        {
-            Hook();
-            LineRender(Hooked().gameObject);
-            cursor.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
-        }
-        else
-        {
-            cursor.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
-        }
         _jumpPressed = false;
          
         //Hook Timer
@@ -119,22 +145,33 @@ public class PlayerController : MonoBehaviour
                 onCooldown = false;
             }
         }
+        _prevHookPressed = _hookPressed;
     }
 
-    private void LineRender(GameObject hookTarget)
+    private void OnGrappleAttached()
     {
-        _lineRenderer.enabled = true;
-        _lineRenderer.SetPosition(0, transform.position);
-        _lineRenderer.SetPosition(1, hookTarget.transform.position);
-        Transform childTransform = hookTarget.transform.GetChild(0);
-        GameObject childGameObject = childTransform.gameObject;
-        childGameObject.SetActive(true);
+        
     }
 
-    private void Hook()
+    private void OnGrappleNotAttached()
     {
-        Vector2 direction = (cursor.transform.position - transform.position).normalized;
+        StartHookCooldown();
+    }
+
+    private void HookTowardsAttachPoint()
+    {
+        Vector2 origin = transform.position;
+        Vector2 direction = ((Vector2)grapple.AttachPoint - origin).normalized;
+        // Set linear velocity toward attach point
         _rb.linearVelocity = direction * hookForce;
+        // If very close to attach point, start cooldown and detach to avoid jitter/pulling through the point
+        float dist = Vector2.Distance(origin, grapple.AttachPoint);
+        if (dist <= hookReachedDistance && !onCooldown)
+        {
+            // reached close enough - release and cooldown
+            grapple.Detach();
+            StartHookCooldown();
+        }
     }
 
     private void Jump()
@@ -147,35 +184,12 @@ public class PlayerController : MonoBehaviour
         _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
     }
 
+
     private void StartHookCooldown()
     {
         onCooldown = true;
         _timer = HookCooldown;
     }
 
-    // private bool Hooked()
-    // {
-    //     Vector2 origin = transform.position;
-    //     Vector2 direction = ((Vector2)cursor.transform.position - origin).normalized;
-    //     RaycastHit2D hit = Physics2D.Raycast(origin, direction, cursor.GetComponent<Cursor>().maxDistanceToPlayer, hooks);
-    //     if (hit.distance < hookReachedDistance && !onCooldown)
-    //     {
-    //         Debug.Log("inRange");
-    //         StartHookCooldown();
-    //     }
-    //     return hit.collider != null && !(onCooldown);
-    // }
     
-    private Collider2D Hooked()
-    {
-        Vector2 origin = transform.position;
-        Vector2 direction = ((Vector2)cursor.transform.position - origin).normalized;
-        RaycastHit2D hit = Physics2D.Raycast(origin, direction, cursor.GetComponent<Cursor>().maxDistanceToPlayer, hooks);
-        if (hit.distance < hookReachedDistance && !onCooldown)
-        {
-            Debug.Log("inRange");
-            StartHookCooldown();
-        }
-        return hit.collider;
-    }
 }

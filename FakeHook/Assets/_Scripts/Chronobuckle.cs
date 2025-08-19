@@ -1,3 +1,4 @@
+using _Scripts;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -49,6 +50,8 @@ public class Chronobuckle : MonoBehaviour
 
     void Update()
     {
+        if (GameController.Instance.gamePaused) return;
+
         if (_slowTime.IsPressed())
         {
             phaseOfBuckle = BucklePhase.Depleting;
