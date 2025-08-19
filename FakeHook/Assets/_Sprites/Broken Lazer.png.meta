@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 34644757acd8344478f1188256690607
+guid: 2ce5f017453068149919113b06b5477c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4570153536982545689
-    second: Rope_0
+      213: -23952081493095622
+    second: Broken Lazer_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rope_0
+      name: Broken Lazer_0
       rect:
         serializedVersion: 2
-        x: 10
+        x: 0
         y: 0
-        width: 9
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ea0923629d8390c0800000000000000
-      internalID: -4570153536982545689
+      spriteID: a3b09f275b7eaaff0800000000000000
+      internalID: -23952081493095622
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Rope_0: -4570153536982545689
+      Broken Lazer_0: -23952081493095622
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

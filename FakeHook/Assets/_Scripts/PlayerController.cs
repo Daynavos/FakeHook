@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 _moveValue;
     public bool maintainMomentumOnGround;
     private bool _jumping = false;
+    public Animator animator;
     
     [Header("Ground check")]
     public Transform groundCheck;
@@ -36,9 +37,10 @@ public class PlayerController : MonoBehaviour
     private float _timer;
     private bool onCooldown = false;
     public Grapple grapple;
+    private static readonly int Speed = Animator.StringToHash("Speed");
+
     
     private LineRenderer _lineRenderer;
-    private static readonly int HookAnim = Animator.StringToHash("Hook");
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         if (_rb) _rb.freezeRotation = true;
         _lineRenderer = GetComponent<LineRenderer>();
+        animator = GetComponent<Animator>();
     }
     private void OnEnable()
     {
@@ -79,7 +82,6 @@ public class PlayerController : MonoBehaviour
             _jumpPressed = true;
         }
         _hookPressed = _hookAction.IsPressed();
-        
     }
 
     void FixedUpdate()
@@ -98,10 +100,16 @@ public class PlayerController : MonoBehaviour
             _rb.linearVelocity = new Vector2(newX, currentVelocity.y);
         }
         
+        if (_rb.linearVelocity.x > 0)
+            transform.localScale = new Vector3(1, 1, 1);
+        else if (_rb.linearVelocity.x < 0)
+            transform.localScale = new Vector3(-1, 1, 1);
+        
         //Jump
         if (_isGrounded)
         {
             _jumping = false;
+            animator.SetFloat(Speed, Mathf.Abs(_rb.linearVelocity.x));
         }
         if (_jumpPressed && _isGrounded)
         {
