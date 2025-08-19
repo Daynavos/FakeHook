@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
     private float _timer;
     private bool onCooldown = false;
     
+    private LineRenderer _lineRenderer;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,6 +45,15 @@ public class PlayerController : MonoBehaviour
         _hook = actionAsset.FindAction("Player/ThrowHook");
         _rb = GetComponent<Rigidbody2D>();
         if (_rb) _rb.freezeRotation = true;
+        _lineRenderer = GetComponent<LineRenderer>();
+    }
+    private void OnEnable()
+    {
+        actionAsset.FindActionMap("Player").Enable();
+    }
+    private void OnDisable()
+    {
+        actionAsset.FindActionMap("Player").Disable();
     }
     private void OnEnable()
     {
@@ -66,7 +77,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetButtonUp("Fire2"))
+        if (_hook.WasReleasedThisFrame())
         {
             StartHookCooldown();
         }
@@ -108,7 +119,7 @@ public class PlayerController : MonoBehaviour
         //Hook Timer
         if (onCooldown)
         {
-            _timer -= Time.fixedDeltaTime;
+            _timer -= Time.fixedUnscaledDeltaTime;
             if (_timer <= 0)
             {
                 _timer = 0;
