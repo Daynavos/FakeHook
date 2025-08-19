@@ -50,7 +50,7 @@ public class Chronobuckle : MonoBehaviour
 
     void Update()
     {
-        if (GameController.Instance.gameOver) return;
+        if (GameController.Instance.gamePaused) return;
 
         if (_slowTime.IsPressed())
         {

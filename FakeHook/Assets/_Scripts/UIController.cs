@@ -10,8 +10,9 @@ namespace _Scripts
         public TextMeshProUGUI timerText;
         public GameObject deathPanel;
         public TextMeshProUGUI finalScoreText;
-        public 
-
+        public GameObject winPanel;
+        public TextMeshProUGUI winText;
+        public GameObject pausePanel;
         void Awake()
         {
             if (Instance != null && Instance != this)
@@ -20,13 +21,38 @@ namespace _Scripts
                 return;
             }
             Instance = this;
+            timerText.text = "";
             deathPanel.SetActive(false);
+            winPanel.SetActive(false);
+            pausePanel.SetActive(false);
         }
 
         public void ShowDeathScreen(float timer)
         {
             deathPanel.SetActive(true);
-            finalScoreText.text = "Your time was: " + timer;
+            finalScoreText.text = "You died.";
+            if (timer != 0f)
+            {
+                finalScoreText.text += "\nYour time was: " + timer;
+            }
+            else
+            {
+                finalScoreText.text += ".. on the tutorial...";
+            }
+        }
+        public void ShowPauseScreen()
+        {
+            pausePanel.SetActive(true);
+        }
+        public void HidePauseScreen()
+        {
+            pausePanel.SetActive(false);
+        }
+
+        public void ShowWinScreen(float timer)
+        {
+            winPanel.SetActive(true);
+            winText.text = "Congrats!\nYour final time was: " + timer;
         }
 
         public void UpdateTime(float timer)
