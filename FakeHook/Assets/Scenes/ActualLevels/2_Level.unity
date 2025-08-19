@@ -119,17 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &81283994 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4029422555807388813, guid: 41c5cab6655ed964288956e88a8e469a, type: 3}
-  m_PrefabInstance: {fileID: 232111820}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e13d2eb8a15d4c2392d630074ad8b520, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &183075128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -138,14 +127,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 755777243105739525, guid: 4ef4b6077e6119c4fa72d5b3620ca8e6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 81283994}
-    - target: {fileID: 5161489320950669280, guid: 4ef4b6077e6119c4fa72d5b3620ca8e6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 81283994}
     - target: {fileID: 5789983217875763472, guid: 4ef4b6077e6119c4fa72d5b3620ca8e6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -226,14 +207,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6522971047693725234, guid: 4ef4b6077e6119c4fa72d5b3620ca8e6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 81283994}
-    - target: {fileID: 7149936064058696916, guid: 4ef4b6077e6119c4fa72d5b3620ca8e6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 81283994}
     - target: {fileID: 8175628590406977549, guid: 4ef4b6077e6119c4fa72d5b3620ca8e6, type: 3}
       propertyPath: m_Name
       value: GameCanvas
