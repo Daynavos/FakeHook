@@ -29,7 +29,6 @@ namespace _Scripts
                 ropeTransform.localScale = new Vector3(distance1, 0.5f, 1);
                 hookHeadTransform.position = AttachPoint;
             }
-
             if (!IsFlying) return;
             Vector3 headPos = hookHeadTransform.position;
             // move head toward target
@@ -67,7 +66,7 @@ namespace _Scripts
                 return;
             }
             float distToTarget = Vector2.Distance(newHeadPos, _target);
-            float reachedThresh = 0.1f;
+            float reachedThresh = 0.3f;
             if (distToTarget <= reachedThresh)
             {
                 IsFlying = false;
