@@ -41,6 +41,9 @@ public class PlayerController : MonoBehaviour
 
     
     private LineRenderer _lineRenderer;
+    
+    public GameObject audioManager;
+    private AudioManager audManscript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -52,6 +55,7 @@ public class PlayerController : MonoBehaviour
         if (_rb) _rb.freezeRotation = true;
         _lineRenderer = GetComponent<LineRenderer>();
         animator = GetComponent<Animator>();
+        audManscript = audioManager.GetComponent<AudioManager>();
     }
     private void OnEnable()
     {
@@ -160,6 +164,8 @@ public class PlayerController : MonoBehaviour
 
     private void HookTowardsAttachPoint()
     {
+        audManscript.PlaySFX(audManscript.grapple);
+
         Vector2 origin = transform.position;
         Vector2 direction = ((Vector2)grapple.AttachPoint - origin).normalized;
         // Set linear velocity toward attach point
@@ -180,6 +186,8 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
+        audManscript.PlaySFX(audManscript.Jump);
+
         _jumping = true;
         _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
     }
