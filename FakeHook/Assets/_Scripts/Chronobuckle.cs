@@ -57,15 +57,18 @@ public class Chronobuckle : MonoBehaviour
     {
         if (GameController.Instance.gamePaused) return;
 
-        if (_slowTime.IsPressed())
+        if (phaseOfBuckle != BucklePhase.CoolDown)
         {
-            phaseOfBuckle = BucklePhase.Depleting;
-        }
-        else
-        {
-            if (phaseOfBuckle != BucklePhase.FullyCharged)
+            if (_slowTime.IsPressed())
             {
-                phaseOfBuckle = BucklePhase.Charging;
+                phaseOfBuckle = BucklePhase.Depleting;
+            }
+            else
+            {
+                if (phaseOfBuckle != BucklePhase.FullyCharged)
+                {
+                    phaseOfBuckle = BucklePhase.Charging;
+                }
             }
         }
         
@@ -105,17 +108,17 @@ public class Chronobuckle : MonoBehaviour
 
     private void DepletingTimer()
     {
-        UpdateTimerBar();
         _chargeLevel = Mathf.Clamp(_chargeLevel - Time.deltaTime, 0f, fullyChargedBuckle);
 
         if (_chargeLevel <= 0f) 
         {
             Time.timeScale = 1f;
             phaseOfBuckle = BucklePhase.CoolDown;
+            
+            _cooldownTimer = cooldownDuration;
         }
     }
-
-
+    
     private void ChargingTimer()
     {
         UpdateTimerBar();
@@ -136,7 +139,6 @@ public class Chronobuckle : MonoBehaviour
     private void CooldownTimer()
     {
         _cooldownTimer -= Time.deltaTime;
-        UpdateTimerBar();
 
         if (_cooldownTimer <= 0f)
         {
