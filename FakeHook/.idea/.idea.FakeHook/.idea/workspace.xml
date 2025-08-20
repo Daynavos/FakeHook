@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3f42d23-a901-4bf9-a23d-daf924ff35a6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FakeHook/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FakeHook/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Chronobuckle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Chronobuckle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualLevels/1_TutorialLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualLevels/1_TutorialLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActualLevels/2_Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActualLevels/2_Level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Langa.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Langa.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
