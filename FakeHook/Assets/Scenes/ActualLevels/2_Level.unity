@@ -656,7 +656,7 @@ GameObject:
   - component: {fileID: 1761051701}
   - component: {fileID: 1761051704}
   m_Layer: 0
-  m_Name: Square
+  m_Name: start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -772,7 +772,7 @@ Transform:
   m_GameObject: {fileID: 1761051700}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.242, y: -3.5255, z: 0}
+  m_LocalPosition: {x: -8.242, y: -3.595, z: 0}
   m_LocalScale: {x: 2.4497259, y: 0.24490437, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -805,7 +805,7 @@ GameObject:
   - component: {fileID: 1793139250}
   - component: {fileID: 1793139249}
   m_Layer: 5
-  m_Name: rapple
+  m_Name: instructionns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
